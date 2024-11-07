@@ -1,7 +1,7 @@
 import { Component, Input, Inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { productsData } from '../../../models/interfaces';
-import { CartService } from '../../core/cart.service';
+import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-card',
