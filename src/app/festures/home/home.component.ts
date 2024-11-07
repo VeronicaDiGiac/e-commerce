@@ -3,7 +3,7 @@ import { ButtonComponent } from '../../core/button/button.component';
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy } from '@angular/core';
 import CardComponent from '../card/card.component';
-import { CartService } from '../../core/cart.service';
+import { CartService } from '../../services/cart.service';
 import { CardRewevComponent } from '../card-rewev/card-rewev.component';
 import { BlogCardComponent } from '../../core/blog-card/blog-card.component';
 import { NewsLetterInputComponent } from '../news-letter-input/news-letter-input.component';

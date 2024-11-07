@@ -19,6 +19,16 @@ export class CartService {
     console.log('addotocart chiamata');
   }
 
+  // addToCart(itemToAdd: productsData) {
+  //   const isInCart = this.items().some((item) => item.id === itemToAdd.id);
+
+  //   if (!isInCart) {
+  //     this.items.update((items) => [...items, itemToAdd]);
+  //   } else {
+  //     console.log('Item already in the cart');
+  //   }
+  // }
+
   removeFromCart(itemToRemove: productsData) {
     this.items.update((items) =>
       items.filter((item) => item.id !== itemToRemove.id)

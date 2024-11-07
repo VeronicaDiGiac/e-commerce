@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { CartService } from '../../core/cart.service';
+import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-cart',
