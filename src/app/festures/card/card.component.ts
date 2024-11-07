@@ -35,7 +35,7 @@ import { CartService } from '../../core/cart.service';
 })
 export default class CardComponent {
   @Input() products!: productsData;
-  @Input() img!: string | [{}];
+  @Input() img!: string | [];
   @Input() imagePaths: string[] = [];
   @Input() sliceRange: [number, number] = [0, 0];
   @Input() customClasses: string = '';
