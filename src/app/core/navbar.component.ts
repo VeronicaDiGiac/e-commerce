@@ -31,15 +31,17 @@ import { toSignal } from '@angular/core/rxjs-interop';
         </div>
         <ul
           tabindex="0"
-          class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow "
+          class="menu menu-sm dropdown-content bg-gray-400 text-white rounded-box z-[9999] mt-3 w-52 p-2 shadow-lg "
         >
           <li routerLink="man-section">
-            <a>Man</a>
+            <a class="hover:bg-slate-700">Man</a>
           </li>
           <li routerLink="woman-section">
-            <a>Woman</a>
+            <a class="hover:bg-slate-700">Woman</a>
           </li>
-          <li routerLink="contact"><a>Contact</a></li>
+          <li routerLink="contact">
+            <a class="hover:bg-slate-700">Contact</a>
+          </li>
         </ul>
       </div>
       <a class="btn btn-ghost text-xl" routerLink="home">Shop</a>
@@ -79,7 +81,7 @@ import { toSignal } from '@angular/core/rxjs-interop';
           </div>
           <div
             tabindex="0"
-            class="card card-compact dropdown-content bg-base-100 z-[1] mt-3 w-52 shadow"
+            class="card card-compact dropdown-content  bg-gray-400 text-white z-[999] mt-3 w-52 p-2 shadow-lg"
           >
             <div class="card-body">
               <span class="text-lg font-bold"
@@ -89,7 +91,10 @@ import { toSignal } from '@angular/core/rxjs-interop';
                 >Subtotal: $ {{ cartService.totalCartCost() }}
               </span>
               <div class="card-actions">
-                <button class="btn btn-primary btn-block" routerLink="cart">
+                <button
+                  class="btn btn-primary btn-block hover:bg-gray-800"
+                  routerLink="cart"
+                >
                   View cart
                 </button>
               </div>
@@ -111,7 +116,7 @@ import { toSignal } from '@angular/core/rxjs-interop';
           </div>
           <ul
             tabindex="0"
-            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+            class="menu menu-sm dropdown-content rounded-box bg-gray-400 text-white z-[999] mt-3 w-52 p-2 shadow-lg"
           >
             @if (authSignal()) {
             <li>

@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
 import { ButtonComponent } from '../../core/button/button.component';
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy } from '@angular/core';
@@ -127,33 +127,34 @@ import { RouterLink } from '@angular/router';
     </div>
     <!-- SHOP FOR MAN E WOMAN -->
     <div
-      class="flex flex-col md:flex-row justify-center gap-10 mt-20 space-y-4 md:space-y-0 md:space-x-4 "
+      class="flex flex-col md:flex-row justify-center gap-10 mt-20 space-y-4 md:space-y-0 md:space-x-4"
     >
       <div
-        class="cursor-pointer transform hover:scale-105 transition duration-300 ease-in-out"
+        class="cursor-pointer transform hover:scale-105 transition duration-300 ease-in-out w-full md:w-1/3"
+        routerLink="/man-section"
       >
         <img
           [src]="shopImages[0].manImg"
           alt="shopformanimg"
-          class="shopImages"
-          routerLink="woman-section"
+          class="shopImages w-full h-auto"
         />
         <p
-          class="text-center text-3xl p-5 font-bold bg-gradient-to-r from-neutral-900 to-gray-700 text-white rounded-b-lg shadow-lg"
+          class="text-center text-lg md:text-3xl p-3 md:p-5 font-bold bg-gradient-to-r from-neutral-900 to-gray-700 text-white rounded-b-lg shadow-lg"
         >
           {{ title[7].EightTitle }}
         </p>
       </div>
       <div
-        class="cursor-pointer transform hover:scale-105 transition duration-300 ease-in-out "
+        class="cursor-pointer transform hover:scale-105 transition duration-300 ease-in-out  md:w-1/3"
+        routerLink="/woman-section"
       >
         <img
           [src]="shopImages[1].womanImg"
-          alt="shopformanimg"
-          class="shopImages"
+          alt="shopforwomanimg"
+          class="shopImages w-full h-auto"
         />
         <p
-          class="text-center text-3xl p-5 font-bold bg-gradient-to-r from-neutral-900 to-gray-700 text-white rounded-b-lg shadow-lg"
+          class="text-center text-lg md:text-3xl p-3 md:p-5 font-bold bg-gradient-to-r from-neutral-900 to-gray-700 text-white rounded-b-lg shadow-lg"
         >
           {{ title[8].NineTitle }}
         </p>
@@ -316,28 +317,28 @@ export default class HomeComponent {
   ];
   besteSellersHomePage = [
     {
-      id: 1,
+      id: 16,
       name: 'McAvoy Jacket ',
       img: '',
       description: '',
       price: 120.0,
     },
     {
-      id: 2,
+      id: 17,
       name: 'Cargo Pants',
       description: '',
       price: 90.0,
       img: '',
     },
     {
-      id: 3,
+      id: 18,
       name: 'LakeHouse Jacket',
       description: '',
       price: 135.0,
       img: '',
     },
     {
-      id: 4,
+      id: 19,
       name: 'Monterey Shirt',
       description: '',
       price: 68.0,
