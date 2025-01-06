@@ -50,12 +50,15 @@ import { CartService } from '../../services/cart.service';
         }
         <!-- Riepilogo Totale -->
         <div class="mt-8 p-4 border-t border-gray-200">
-          <div class="flex justify-between text-gray-700 font-bold text-xl">
+          <div
+            class="flex flex-col sm:flex-row justify-between text-gray-700 font-bold text-xl space-y-2 sm:space-y-0"
+          >
             <span>Subtotal € {{ cartService.totalCartCost() }}</span>
-            <span class="text-sm bg-gray-200"
-              >Shipping and taxes will be calculated at checkout.</span
-            >
+            <span class="text-sm bg-gray-200 sm:ml-4">
+              Shipping and taxes will be calculated at checkout.
+            </span>
           </div>
+
           <button
             class="w-full mt-6 bg-gradient-to-r from-neutral-900 to-gray-700 hover:bg-blue-700 text-white font-bold py-4 rounded-lg transition duration-200 text-lg"
           >
@@ -76,39 +79,3 @@ import { CartService } from '../../services/cart.service';
 export default class CartComponent {
   constructor(public cartService: CartService) {}
 }
-
-// @if (cartService.cartIsEmpty()) {
-//   <div class="text-center my-6">No Items in Cart</div>
-//   } @else {
-//   <table class="table">
-//     <!-- head -->
-//     <thead>
-//       <tr>
-//         <th>Name</th>
-//         <th>Qty</th>
-//         <th>Cost</th>
-//       </tr>
-//     </thead>
-//     <tbody>
-//       @for (item of cartService.items(); track item.id){
-
-//       <tr>
-//         <th>{{ $index + 1 }}</th>
-//         <td>{{ item.name }}</td>
-//         <td>{{ item.price }}</td>
-//         <td>
-//           <button
-//             class="btn btn-sm cursor-pointer"
-//             (click)="cartService.removeFromCart(item)"
-//           >
-//             Remove
-//           </button>
-//         </td>
-//       </tr>
-//       }
-//     </tbody>
-//   </table>
-//   }
-//   <div class="text-xl my-6 flex justify-end">
-//     TOTAL: € {{ cartService.totalCartCost() }}
-//   </div>

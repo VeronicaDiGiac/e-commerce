@@ -14,20 +14,18 @@ export class CartService {
   );
 
   addToCart(itemToAdd: productsData) {
-    const isInCart = this.items().find((items) => items.id === itemToAdd.id);
-    if (!isInCart) this.items.update((items) => [...items, itemToAdd]);
+    const isInCart = this.items().find((item) => {
+      console.log('Item ID:', item.id);
+      console.log('Item to add ID:', itemToAdd.id);
+      return item.id === itemToAdd.id;
+    });
+
+    if (!isInCart) {
+      this.items.update((items) => [...items, itemToAdd]);
+      console.log('is not in cart, added');
+    }
     console.log('addotocart chiamata');
   }
-
-  // addToCart(itemToAdd: productsData) {
-  //   const isInCart = this.items().some((item) => item.id === itemToAdd.id);
-
-  //   if (!isInCart) {
-  //     this.items.update((items) => [...items, itemToAdd]);
-  //   } else {
-  //     console.log('Item already in the cart');
-  //   }
-  // }
 
   removeFromCart(itemToRemove: productsData) {
     this.items.update((items) =>
